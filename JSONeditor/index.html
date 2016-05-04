@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>JSON Editor</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/jquery.json-view.css" rel="stylesheet" />
+    <script src="libs/jquery-1.12.3.min.js"></script>
+    <script src="libs/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/jquery.json-view.js"></script>
+    <script src="libs/angular-file-upload.js"></script>
+
+    <script src="js/app.js"></script>
+
+
+</head>
+<body ng-controller='MainController'>
+
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header" ng-controller="HomeController">
+                <a class="navbar-brand" href="#">{{appTitle}}</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container theme-showcase">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">INPUT</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div ng-file-drop ng-file-select drag-over-class="dragover" class='dropbox' ng-multiple="false" accept=".txt,.csv" ng-model='uploadedFile'>
+                            Drop files here <em>Or</em> click to upload.
+                        </div>
+
+                        <div class="alert alert-info" ng-show="uploadedFile">
+
+                            File was uploaded: <p ng-repeat='f in uploadedFile'>{{f.name}}</p>
+                        </div>
+                        <div class="alert alert-danger" id="mess" style="display:none;">
+                           
+                            <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+                        </div>
+                    </div>
+
+                    <div class="panel-heading" style="border-top-left-radius:0 !important;border-top-right-radius:0 !important;">
+                        <h3 class="panel-title">OUTPUT</h3>
+                    </div>
+                    <div class="panel-body" id="result">
+                        <div id="element"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
