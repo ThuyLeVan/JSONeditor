@@ -6,7 +6,7 @@ app.controller('HomeController', function ($scope) {
 
 
 
-app.controller('MainController', function ($scope) {
+app.controller('MainController', function ($scope, $compile) {
 
     $scope.$watch('uploadedFile', function () {
         if ($scope.uploadedFile != null) {
@@ -15,8 +15,18 @@ app.controller('MainController', function ($scope) {
 
             reader.onload = function (event) {
                 var uploadedFile = this.result;
-                if ($scope.isValidJson(uploadedFile) == true) {
 
+                var myData, dataArray, key;
+                myData = JSON.parse(uploadedFile);
+                dataArray = [];
+                for (key in myData) {
+                    if (myData.hasOwnProperty(key)) {
+                        dataArray.push(key);         // Push the key on the array
+                        dataArray.push(myData[key]); // Push the key's value on the array
+                    }
+                }
+                console.log(myData);
+                if ($scope.isValidJson(uploadedFile) == true) {
                     $('#element').empty();
                     $('#mess').css('display', 'none');
                     $('#element').jsonView(JSON.stringify(
@@ -39,7 +49,30 @@ app.controller('MainController', function ($scope) {
         } catch (e) {
             return false;
         }
+    };
+    $scope.addRow = function () {
+        var row = '<tr>';
+        row += '<td class="col-sm-3">';
+        row += '<input class="form-control" name="glucosa[]" type="text" placeholder="Glucosa" />';
+        row += '</td>';
+        row += '<td class="col-sm-8">';
+        row += '<input class="form-control" name="col_data[]" type="text" placeholder="Data" />';
+        row += '</td>';
+        row += '<td class="col-sm-1 text-center">';
+        row += '<button type="button" class="btn btn-sm btn-danger" ng-click="removeRow($event)">';
+        row += '<span class="glyphicon glyphicon-trash"></span>';
+        row += '</button>';
+        row += '</td>';
+        row += ' </tr>';
+
+        var $el=$('#myTable > tbody:last-child').append(row);
+        $compile($el)($scope);
     }
+    $scope.removeRow = function ($event) {
+        $($event.target).parents('tr:first').remove();
+        return false;
+    }
+
 })
 
 

@@ -45,15 +45,29 @@
                         <div ng-file-drop ng-file-select drag-over-class="dragover" class='dropbox' ng-multiple="false" accept=".txt,.csv" ng-model='uploadedFile'>
                             Drop files here <em>Or</em> click to upload.
                         </div>
-
                         <div class="alert alert-info" ng-show="uploadedFile">
-
-                            File was uploaded: <p ng-repeat='f in uploadedFile'>{{f.name}}</p>
+                               File was uploaded: <p ng-repeat='f in uploadedFile'>{{f.name}}</p>
                         </div>
                         <div class="alert alert-danger" id="mess" style="display:none;">
-                           
-                            <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+                             <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
                         </div>
+                        <hr />
+                        <button class="btn btn-success btn-add"  ng-click="addRow()">
+                            Add <span class="glyphicon glyphicon-plus"></span> 
+                        </button>
+
+                        <table class="table table-hover" id="myTable">
+                            <thead>
+                                <tr>
+                                    <th >KEY</th>
+                                    <th  >VALUE</th>
+                                    <th  ></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
                     </div>
 
                     <div class="panel-heading" style="border-top-left-radius:0 !important;border-top-right-radius:0 !important;">
@@ -67,9 +81,9 @@
         </div>
     </div>
 
-
-
-
+  
+    
+ 
 
 
 

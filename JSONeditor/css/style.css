@@ -9,7 +9,7 @@
 		    
 		    max-width: 500px;
 		   
-            min-height:150px;
+            min-height:120px;
 		    text-align: center;
 		    padding-top: 25px;
 		    margin: 10px auto;
@@ -17,3 +17,14 @@
 .dragover {
 		    border: 4px dashed blue;
 		}
+.entry:not(:first-of-type){
+    margin-top: 10px;
+}
+
+.glyphicon{
+    font-size: 12px;
+}
+
+td {
+ padding:2px;   
+}
