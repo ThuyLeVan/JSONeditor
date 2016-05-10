@@ -23,23 +23,29 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.css" />
+    <Content Include="js\app1.js" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.css.map" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\jquery.json-view.css" />
+    <Content Include="css\myStyle.css" />
     <Content Include="css\style.css" />
+    <Content Include="js\directives.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.html" />
-    <Content Include="js\app.js" />
-    <Content Include="libs\angular-route.min.js" />
-    <Content Include="libs\angular.min.js" />
-    <Content Include="libs\bootstrap.js" />
-    <Content Include="libs\bootstrap.min.js" />
-    <Content Include="libs\jquery-1.12.3.min.js" />
-    <Content Include="libs\jquery.json-view.js" />
-    <Content Include="libs\npm.js" />
+    <Content Include="js\JSONedit.js" />
+    <Content Include="scripts\angular-route.min.js" />
+    <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\autosize.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\jquery-1.12.3.min.js" />
+    <Content Include="scripts\jquery-ui.min.js" />
+    <Content Include="scripts\jquery.json-view.js" />
+    <Content Include="scripts\jquery.min.js" />
+    <Content Include="scripts\sortable.min.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -60,7 +66,9 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="views\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
   </PropertyGroup>

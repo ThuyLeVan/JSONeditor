@@ -1,5 +1,6 @@
 .json-view {
     position: relative;
+    overflow-x:auto;
 }
 
 .json-view .collapser {

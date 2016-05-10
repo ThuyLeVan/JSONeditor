@@ -28,3 +28,31 @@
 td {
  padding:2px;   
 }
+.fitselect{
+    width:18%;
+    display: inline-block;
+}
+.fitinput{
+    width:80%;
+    margin-left:2%;
+    display: inline-block;
+}
+.fitbutton{
+    width:auto;
+    margin-left:2%;
+   
+}
+.fittable{
+  display: block;
+    margin-top:2%;
+   
+}
+hr.style {
+border: 0;
+height: 2px;
+background: #0087F7;
+background-image: -webkit-linear-gradient(left, #f00, #0087F7, #ffd800);
+background-image: -moz-linear-gradient(left, #f00, #0087F7, #ffd800);
+
+background-image: -o-linear-gradient(left, #f00, #0087F7, #ffd800);
+}
