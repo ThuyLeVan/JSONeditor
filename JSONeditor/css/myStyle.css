@@ -1,7 +1,41 @@
-﻿#mainView {
+﻿
+#mainView {
     margin: auto auto 30px;
    max-width: 95%;
 }
+#jsonTextarea {
+     min-height:250px;
+      border-radius: 5px;
+       background: white;
+		margin: 10px auto;
+}
+hr.style {
+border: 0;
+height: 2px;
+background: #0087F7;
+background-image: -webkit-linear-gradient(left, white, #0087F7, white);
+background-image: -moz-linear-gradient(left, white, #0087F7, white);
+background-image: -o-linear-gradient(left, white, #0087F7, white);
+}
+ .navbar {
+      
+      border-radius: 0;
+    }
+.dropbox{
+            border: 2px dashed #0087F7;
+            border-radius: 5px;
+            background: white;
+		    
+		   
+		   
+            min-height:250px;
+		    text-align: center;
+		    padding-top: 25px;
+		    margin: 10px auto;
+		}
+.dragover {
+		    border: 4px dashed blue;
+		}
 
 .red {
     color: red;
@@ -171,3 +205,35 @@
     display: block;
 }
 
+.animated {
+				-webkit-transition: height 0.2s;
+				-moz-transition: height 0.2s;
+				transition: height 0.2s;
+			}
+.video{
+    display: block;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    color: black;
+    padding: 8px;
+    border-radius: 3px;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+footer {
+
+    
+    }

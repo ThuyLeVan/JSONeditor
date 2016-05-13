@@ -23,6 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.css" />
+    <Content Include="example.html" />
     <Content Include="js\app1.js" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.css.map" />
@@ -46,6 +47,9 @@
     <Content Include="scripts\jquery.json-view.js" />
     <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\sortable.min.js" />
+    <Content Include="views\about.html" />
+    <Content Include="views\example.html" />
+    <Content Include="views\home.html" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -66,9 +70,7 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="views\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
   </PropertyGroup>

@@ -1,94 +1,57 @@
-﻿<!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+﻿<!doctype html>
+<html ng-app="JSONedit">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>JSON Editor</title>
+    <!--js lib-->
+    <script src="../scripts/jquery.min.js"></script>
+    <script src="../scripts/jquery-ui.min.js"></script>
+    <script src="../scripts/angular.min.js"></script>
+    <script src="../scripts/sortable.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
+    <script src="../scripts/jquery.json-view.js"></script>
+    <script src="../scripts/angular-file-upload.js"></script>
+    <script src="../scripts/angular-route.min.js"></script>
+    <!--css lib-->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/myStyle.css" rel="stylesheet" type="text/css" />
+    <link href="../css/jquery.json-view.css" rel="stylesheet" />
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/jquery.json-view.css" rel="stylesheet" />
-    <script src="scripts/jquery-1.12.3.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="scripts/angular.min.js"></script>
-    <script src="scripts/jquery.json-view.js"></script>
-    <script src="scripts/angular-file-upload.js"></script>
-    
-    <script src="js/app1.js"></script>
-   
+
+    <!--main js-->
+    <script src="../js/app1.js"></script>
+
 
 </head>
-<body ng-controller='MainController'>
-
-
+<body>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
-            <div class="navbar-header" ng-controller="HomeController">
+            <div class="navbar-header" ng-controller="HomeCtrl">
                 <a class="navbar-brand" href="#">{{appTitle}}</a>
             </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
+            <ul class="nav navbar-nav" ng-controller="HeaderCtrl">
+                <li ng-class="{ active: isActive('/')}" ><a href="#">Home</a></li>
+                <li ng-class="{ active: isActive('/example')}"><a href="#/example">Example</a></li>
+                <li ng-class="{ active: isActive('/about')}"><a href="#/about">About</a></li>
             </ul>
         </div>
     </nav>
-
-    <div class="container theme-showcase">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="panel panel-success">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">INPUT</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div ng-file-drop ng-file-select drag-over-class="dragover" class='dropbox' ng-multiple="false" accept=".txt,.csv" ng-model='uploadedFile'>
-                            Drop files here <em>Or</em> click to upload.
-                        </div>
-                        <div class="alert alert-info" ng-show="uploadedFile">
-                               File was uploaded: <p ng-repeat='f in uploadedFile'>{{f.name}}</p>
-                        </div>
-                        <div class="alert alert-danger" id="mess" style="display:none;">
-                             <strong>Error!</strong> Please check format of JSON file.
-                        </div>
-                        <hr class="style">
-                        <button class="btn btn-success btn-add" style="margin-bottom:10px;"ng-click="addRow()" >
-                            Add <span class="glyphicon glyphicon-plus"></span> 
-                        </button>
-
-                        <table class="table table-hover table-bordered" id="myTable" ng-show="checkRow()" >
-                            <thead>
-                                <tr class="info" >
-                                    <th>Key</th>
-                                    <th>
-                                        Value
-                                    </th>
-                                    <th>
-                                        
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody >
-                                
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="panel-heading" style="border-top-left-radius:0 !important;border-top-right-radius:0 !important;">
-                        <h3 class="panel-title">OUTPUT</h3>
-                    </div>
-                    <div class="panel-body" id="result">
-                        <div id="element"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="container theme-showcase"  ng-view ></div>
    
+    <div class="navbar">
+        <hr class="style">
+        <div class="container">
+            <p class="navbar-text pull-left">
+                © 2016 - Site Built By Thuy Le Van - 
+                <a href="#" >4T Company</a>
+            </p>
+
+            <a href="https://github.com/ThuyLeVan/JSONeditor" target="_blank" class="navbar-btn btn-danger btn pull-right">
+                <span class="glyphicon glyphicon-star"></span> View it on GitHub
+            </a>
+        </div>
+   </div>
 </body>
 </html>
