@@ -1,3 +1,4 @@
+/*Written by Thuy Le 05-2016*/
 'use strict'; // use mode "use strict"
 
 var app = angular.module('JSONedit', ['ui.sortable', 'angularFileUpload', 'ngRoute']);

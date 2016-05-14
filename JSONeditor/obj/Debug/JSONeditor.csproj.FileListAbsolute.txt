@@ -1,6 +1,6 @@
 C:\Users\Diamond\Desktop\JSONeditor\JSONeditor\bin\JSONeditor.dll.config
 C:\Users\Diamond\Desktop\JSONeditor\JSONeditor\bin\JSONeditor.dll
 C:\Users\Diamond\Desktop\JSONeditor\JSONeditor\bin\JSONeditor.pdb
+C:\Users\Diamond\Desktop\JSONeditor\JSONeditor\obj\Debug\JSONeditor.csprojResolveAssemblyReference.cache
 C:\Users\Diamond\Desktop\JSONeditor\JSONeditor\obj\Debug\JSONeditor.dll
 C:\Users\Diamond\Desktop\JSONeditor\JSONeditor\obj\Debug\JSONeditor.pdb
-C:\Users\Diamond\Desktop\JSONeditor\JSONeditor\obj\Debug\JSONeditor.csprojResolveAssemblyReference.cache
